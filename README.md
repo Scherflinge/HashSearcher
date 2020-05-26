@@ -2,8 +2,6 @@
 
 HashSearcher is a program written in python that allows a user to search both Google Drive and Dropbox for files from perspective hashes. All files with matching hashes will be returned to the user. This can be done from either a JSON file containing a set of hashes, or from calculating the set of hashes from a folder of files.
 
-Also provided in this submition is log in credentials, allowing you to see the files uploaded to Google Drive, and Dropbox. Provided are the ways to authenticate a user with this program, but for brevity's sake, login tokens have been provided as well. 
-
 ## Installation
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install both the [DropBox SDK](https://github.com/dropbox/dropbox-sdk-python) for python.
