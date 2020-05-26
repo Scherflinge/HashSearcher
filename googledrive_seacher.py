@@ -100,7 +100,7 @@ def checkGoogleHashes(hashesToCheck, tokenPath):
     return foundFiles
 
 def createGoogleAuth(picklecredsPath):
-    auth_path = None # Removed key access for privacy, you can easily create you own google application file for auth creds.
+    auth_path = DRIVE_SECRET # Removed key access for privacy, you can easily create you own google application file for auth creds.
     print("1. Follow the link provided")
     print("2. Click your account (or sign in)")
     print("3. Click \'Advanced\' and then \'Go to Quickstart\'")
