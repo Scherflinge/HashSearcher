@@ -27,7 +27,7 @@ I've create test accounts for DropBox and Google Drive found in `ExampleAccounts
 Create your credentials for DropBox using the `-ds FILEPATH`, `--DropboxSetup FILEPATH` tag. You will be prompted to enter your username and password. `FILEPATH` is the path to where the token will be stored, you will need this later.
 
 ```bash
-> python3 scherflinge_final.py -ds dropbox.token
+> python3 HashSearcher.py -ds dropbox.token
 "1. Go to: ...
 2. Click 'Allow' (you might have to log in first).
 3. Copy the authorization code.
@@ -36,7 +36,7 @@ Enter the authorization code here:"
 The same can be done for Google Drive, using the `-gs FILEPATH` tag.
 
 ```bash
-> python3 scherflinge_final.py -gs drive.token
+> python3 HashSearcher.py -gs drive.token
 "1. Follow the link provided
 2. Click your account (or sign in)
 3. Click 'Advanced' and then 'Go to HashSearcher'
@@ -52,7 +52,7 @@ The `-h` tag will show you the parameters available, but a brief rundown will be
 To create a file containing hashes, you can use the tag `-hp FOLDERPATH`, `--HashPath FOLDERPATH` to traverse to a folder, and calculate all the hashes. If you wish to save all the hashes that were found, you can use the `-ho OUTPUTFILEPATH`, `--HashOutput OUTPUTFILEPATH` to create a JSON file containing all sha256 and md5 hashes found.
 
 ```bash
-> python3 scherflinge_final.py -hp images/folder1 -ho hashes.json
+> python3 HashSearcher.py -hp images/folder1 -ho hashes.json
 ``` 
 
 Once the file of hashes is saved, it can be used to query Google Drive and DropBox.
@@ -62,7 +62,7 @@ The option to save the hashes can be skipped if instead you want to immediately 
 To query Google Drive and DropBox, you must supply your tokens and the hashes to search. You can either provide the folder to hash, or a JSON file containing all the hashes you want to search. The hash file can be provided through the `-hf FILEPATH`, `--HashFile FILEPATH` tag, or `-hp FOLDERPATH`, `--HashPath FOLDERPATH` tag. To query DropBox or Google Drive use the `-gt GOOGLETOKEN`, `-dt DROPBOXTOKEN` or `--GoogleToken GOOGLETOKEN`, `-DropboxToken DROPBOXTOKEN`. This will print out all the data found.
 
 ```bash
-> python3 scherflinge_final.py -hf hashes.json -gt google.token -dt dropbox.token
+> python3 HashSearcher.py -hf hashes.json -gt google.token -dt dropbox.token
 "Google Drive results:
 File Name: 20210305_155203.jpg
 Original File Name: 20210305_155203.jpg
@@ -78,5 +78,5 @@ You also have the option to check only Google Drive or Dropbox by omitting which
 
 You may also want to store your results, this can be done with the `-o OUTPUTFILE`, `--Output OUTPUTFILE` tag. This allows you to save your search results into a json file.
 ```bash
-> python3 scherflinge_final.py -hf hashes.json -gt google.token -dt dropbox.token -o output.json
+> python3 HashSearcher.py -hf hashes.json -gt google.token -dt dropbox.token -o output.json
 ```
