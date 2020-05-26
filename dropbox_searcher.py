@@ -94,8 +94,8 @@ def traverseFolders(dbx, pth = "", hashesToFind = [], tags = {}):
 
 
 def createDropBoxAuth(path):
-    APP_KEY = None # Removed key access for privacy, you can easily create you own DropBox application file for auth creds.
-    APP_SECRET = None
+    APP_KEY = DROPBOX_APPKEY # Removed key access for privacy, you can easily create you own DropBox application file for auth creds.
+    APP_SECRET = DROPBOX_APPSECRET
 
     auth_flow = DropboxOAuth2FlowNoRedirect(APP_KEY, APP_SECRET)
 
