@@ -100,7 +100,7 @@ def checkGoogleHashes(hashesToCheck, tokenPath):
     return foundFiles
 
 def createGoogleAuth(picklecredsPath):
-    auth_path = json.loads('{"installed":{"client_id":"87640492447-j7algdodcb29rdaerj1toqenkr0slh1v.apps.googleusercontent.com","project_id":"hashsearch-1586971794198","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","client_secret":"PM4wXOIzUYDpzKQU_z2Kz7kv","redirect_uris":["urn:ietf:wg:oauth:2.0:oob","http://localhost"]}}')
+    auth_path = None # Removed key access for privacy, you can easily create you own google application file for auth creds.
     print("1. Follow the link provided")
     print("2. Click your account (or sign in)")
     print("3. Click \'Advanced\' and then \'Go to Quickstart\'")
